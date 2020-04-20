@@ -1,26 +1,28 @@
 function getStyleUse(bundleFilename) {
-  return [
-    {
+  return [{
       loader: 'file-loader',
       options: {
         name: bundleFilename,
       },
     },
-    { loader: 'extract-loader' },
-    { loader: 'css-loader' },
+    {
+      loader: 'extract-loader'
+    },
+    {
+      loader: 'css-loader'
+    },
     {
       loader: 'sass-loader',
       options: {
         includePaths: ['./node_modules'],
         implementation: require('dart-sass'),
         fiber: require('fibers'),
-  }
+      }
     },
   ];
 }
 
-module.exports = [
-  {
+module.exports = [{
     entry: './login.scss',
     output: {
       // This is necessary for webpack to compile, but we never reference this js file.
@@ -55,7 +57,9 @@ module.exports = [
       loaders: [{
         test: /login.js$/,
         loader: 'babel-loader',
-        query: {presets: ['env']}
+        query: {
+          presets: ['env']
+        }
       }]
     },
   },
@@ -68,7 +72,9 @@ module.exports = [
       loaders: [{
         test: /home.js$/,
         loader: 'babel-loader',
-        query: {presets: ['env']}
+        query: {
+          presets: ['env']
+        }
       }]
     },
   }

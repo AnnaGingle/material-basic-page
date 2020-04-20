@@ -1633,9 +1633,7 @@ svg.logo:hover path {
     margin-bottom: 0;
 }
 
-.mdc-card {
-    @use "@material/card/mdc-card";
-}
+.mdc-card {}
 
 .my-card-content {
     padding: 16px;
