@@ -1613,6 +1613,10 @@ svg.logo:hover path {
     margin-bottom: 48px;
 }
 
+
+
+
+
 .card {
     background: #fff;
     border-radius: 3px;
@@ -1628,6 +1632,21 @@ svg.logo:hover path {
 .card .card__inner :last-child {
     margin-bottom: 0;
 }
+
+.mdc-card {
+    @use "@material/card/mdc-card";
+}
+
+.my-card-content {
+    padding: 16px;
+}
+
+.my-card {
+    height: 350px;
+    width: 350px;
+}
+
+
 
 footer[role=contentinfo] {
     background: #616161;
